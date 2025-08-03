@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🏋️‍♂️PowerFuel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dark-theme">
+  <header>
+    <div class="branding">
+        <h1>🏋️ PowerFuel</h1>
+        <span class="tagline">–- "Fuel Your Performance, Dominate the Day."</span>
+    </div>
+    
+    <div>
+      <button id="themeToggle" title="Toggle Theme">🔥</button>
+      <button class="cartbuttons" onclick="scrollToCart()">🛒 Cart (<span id="cart-count">0</span>)</button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Extra Heading -->
+     <h3 class="headline">💥 Build Strength, Endurance & Recovery</h3>
+     <p class="section-subtitle">Explore premium supplements for pre, intra & post workout goals.</p>
+
+    <!-- Protein Powders -->
+    <section>
+      <h2>💪 Protein Powders</h2>
+      <div class="quote">“Muscles are torn in the gym, fed in the kitchen, and built in bed.”</div>
+      <div class="products" id="facecare"></div>
+    </section>
+
+    <!-- Pre-Workout Boosters -->
+    <section>
+      <h2>⚡ Pre-Workout Boosters</h2>
+      <div class="quote">“Get in. Get strong. Get out.”</div>
+      <div class="products" id="haircare"></div>
+    </section>
+
+    <!-- Recovery & Wellness -->
+    <section>
+      <h2>🧬 Recovery & Wellness</h2>
+      <div class="quote">“Recovery is where the growth happens.”</div>
+      <div class="products" id="bodycare"></div>
+    </section>
+
+    <!-- Combo Offer -->
+    <section>
+      <h2>🎁 Combo Deal – Get Free Gifts</h2>
+      <div class="quote">“Stack your gains with our combos + a FREE Gym Things!”</div>
+      <div class="products" id="combos"></div>
+
+      <div class="plusCombo">
+          <div class="plus"> + </div>
+          <div class="plus"> + </div>
+      </div>
+
+      <!-- Free Gift Display -->
+      <div class="products">
+        <div class="product-card">
+            <img src="/images/Gym Shaker.png" alt="Free Shaker">
+            <h3>Free Gym Shaker</h3>
+            <p>Included with combo purchase!</p>
+            <button disabled style="background-color: gray;">🎁 Free Gift</button>
+        </div>
+        <div class="product-card">
+            <img src="/images/Gym Gloves.png" alt="Free Shaker">
+            <h3>Free Gym Gloves</h3>
+            <p>Included with combo purchase!</p>
+            <button disabled style="background-color: gray;">🎁 Free Gift</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section id="cart-section">
+      <h2>🛒 Your Stack</h2>
+      <ul id="cart-items"></ul>
+      <p>Total: ₹<span id="cart-total">0</span></p>
+      <button class="cartbuttons" onclick="checkout()">Checkout</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

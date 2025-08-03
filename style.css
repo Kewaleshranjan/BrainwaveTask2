@@ -1,0 +1,278 @@
+:root {
+  --bg-light: #0e0e0e;
+  --bg-dark: #121212;
+  --text-light: #f0f0f0;
+  --text-dark: #ffffff;
+  --accent: #ff3c38; /* bold red */
+  --card-bg: #1a1a1a;
+  --card-shadow: 0 4px 8px rgba(255, 60, 56, 0.2);
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #1a1a1a;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.branding {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  color: var(--accent);
+  margin: 0;
+  text-shadow: 1px 1px 2px #ff6a6a;
+}
+
+.tagline {
+  font-size: 1rem;
+  color: #bbbbbb;
+  margin-top: 0.2rem;
+  font-style: italic;
+  white-space: nowrap;
+  margin-left: 2.5rem;
+}
+
+nav button {
+  background: none;
+  border: 1px solid #ccc;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 6px;
+}
+
+#themeToggle {
+  background: none;
+  font-size: 1.4rem;
+  border: none;
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+.headline {
+  font-size: 1.5rem;
+  color: var(--accent);
+  margin-top: 0%;
+  margin-bottom: -3rem;
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: #999;
+  text-align: center;
+  font-style: italic;
+  margin-bottom: -1rem;
+}
+
+section {
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: #1e1e1e;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+}
+
+.quote {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #cccccc;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.product-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.product-card h3 {
+  margin: 0.5rem 0;
+}
+
+.product-card p {
+  margin: 0.5rem 0;
+}
+
+.product-card button {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.product-card button:hover {
+  background-color: #c91818;
+}
+
+#cart-section {
+  background: #1b1b1b;
+  padding: 2rem;
+  border: 1px solid var(--accent);
+  border-radius: 12px;
+}
+
+#cart-items li {
+  margin: 0.5rem 0;
+  list-style: none;
+}
+
+#cart-items li button {
+  margin-left: 1rem;
+  padding: 2px 8px;
+  font-size: 0.9rem;
+}
+
+.dark header,
+.dark section,
+.dark #cart-section {
+  background-color: #1e1e1e;
+}
+
+.dark .product-card {
+  background: #2a2a2a;
+}
+
+.plusCombo {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.plus {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+  background-color: var(--accent);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px auto;
+}
+
+img {
+  width: 100% !important;
+  height: 200px !important;
+  object-fit: contain !important;
+  display: block;
+}
+
+.cartbuttons {
+  background-color: var(--accent);
+  padding: 5px 15px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+
+
+/* =================== Gray Mode Theme Overrides =================== */
+/* This mode is activated by toggling the "graymode" class on <body> */
+
+body.graymode {
+  --bg-light: #e4d5d5;
+  --bg-dark: #f3e5e5;
+  --text-light: #e0e0e0;
+  --text-dark: #ffffff;
+  --accent: #be8181; /* calm brown */
+  --card-bg: #a17474;
+  --card-shadow: 0 4px 8px rgba(90, 120, 160, 0.2);
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+
+body.graymode header,
+body.graymode section,
+body.graymode #cart-section {
+  background-color: #5d4f4f;
+}
+
+body.graymode .product-card {
+  background: var(--card-bg);
+}
+
+body.graymode h1,
+body.graymode h2,
+body.graymode .headline {
+  color: var(--accent);
+  text-shadow: none;
+}
+
+body.graymode .product-card button,
+body.graymode .cartbuttons {
+  background-color: var(--accent);
+}
+
+body.graymode .product-card button:hover {
+  background-color: #5d4f4f;
+}
