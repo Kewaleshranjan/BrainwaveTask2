@@ -18,7 +18,7 @@ const products = [
   { id: 12, name: "Multivitamin Essentials", price: 749, image: "images/Multivitamin Essentials.png", category: "body" },
 
   // Combo Offers
-  { id: 13, name: "Protein + BCAA Combo", price: 2799, image: "images/Protein + BCAA Combo.PNg", category: "combo" },
+  { id: 13, name: "Protein + BCAA Combo", price: 2799, image: "images/Protein + BCAA Combo.png", category: "combo" },
   { id: 14, name: "Pre-Workout Power Combo", price: 2299, image: "images/Pre-Workout Power Combo.png", category: "combo" }
 ];
 
@@ -107,4 +107,5 @@ themeToggle.addEventListener("click", () => {
 
 
 renderProducts();
+
 
